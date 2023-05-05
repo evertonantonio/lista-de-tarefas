@@ -1,0 +1,24 @@
+*{
+  background-color: #000000;
+}
+form{
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+form input{
+  margin-bottom: 10px;
+}
+
+form input[type='button']{
+  margin-right: 10px;
+}
+
+thead{
+  color: #ffffff;
+}
+
+tbody{
+  color: #ffffff;
+}
