@@ -17,7 +17,7 @@ function App() {
   const [objTarefa, setObjTarefa] = useState(tarefa)
 
   useEffect(() =>{
-    fetch("http://localhost:8080/listar").then(retorno => retorno.json()).then(retornoConvertido => setTarefas(retornoConvertido));
+    fetch("https://average-steam-production.up.railway.app/listar").then(retorno => retorno.json()).then(retornoConvertido => setTarefas(retornoConvertido));
   }, []);
 
   const digitar = (e) =>{
@@ -25,7 +25,7 @@ function App() {
   }
 
   const adicionar = () => {
-    fetch('http://localhost:8080/cadastrar', {
+    fetch('https://average-steam-production.up.railway.app/cadastrar', {
       method: 'post',
       body: JSON.stringify(objTarefa),
       headers: {
@@ -46,7 +46,7 @@ function App() {
   }
 
   const alterar = () => {
-    fetch('http://localhost:8080/alterar', {
+    fetch('https://average-steam-production.up.railway.app/alterar', {
       method: 'put',
       body: JSON.stringify(objTarefa),
       headers: {
@@ -77,7 +77,7 @@ function App() {
   }
 
   const remover = () => {
-    fetch('http://localhost:8080/remover/'+ objTarefa.id, {
+    fetch('https://average-steam-production.up.railway.app/remover/'+ objTarefa.id, {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json',
